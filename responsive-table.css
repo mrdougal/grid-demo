@@ -1,0 +1,67 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  margin: 6vw;
+  color: chocolate;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 1em;
+  text-align: left;
+}
+
+.name {
+  font-weight: 800;
+  min-width: 250px;
+}
+
+@supports (display: grid) {
+  @media (min-width: 1000px) {
+    thead th {
+      border-bottom: 2px solid chocolate;
+    }
+
+    tbody tr:not(:last-child) td {
+      border-bottom: 1px dotted chocolate;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    table,
+    thead,
+    tbody {
+      display: block;
+    }
+
+    table tr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    thead th,
+    tbody td {
+      border: none;
+    }
+
+    thead tr {
+      border-bottom: 2px solid chocolate;
+    }
+
+    tbody tr:not(:last-child) {
+      border-bottom: 1px dotted chocolate;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .name {
+      grid-column: span 2;
+      /* background-color: yellow; */
+    }
+  }
+}
