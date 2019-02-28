@@ -1,0 +1,53 @@
+@supports (display: flex) {
+  body {
+    color: green;
+  }
+
+  @media (min-width: 1200px) {
+    thead th {
+      border-color: green;
+    }
+
+    tbody tr:not(:last-child) td {
+      border-color: green;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    table::before {
+      content: "Display flex";
+    }
+    table,
+    thead,
+    tbody {
+      display: block;
+    }
+
+    table tr {
+      display: flex;
+    }
+
+    thead th,
+    tbody td {
+      border: none;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    thead tr {
+      border-bottom: 2px solid green;
+    }
+
+    tbody tr:not(:last-child) {
+      border-bottom: 1px dotted green;
+    }
+
+    tbody tr:not(:last-child) td {
+      border-bottom: none;
+    }
+
+    .name {
+      min-width: 150px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@supports (display: grid) {
+  body {
+    color: chocolate;
+  }
+
+  @media (min-width: 1200px) {
+    thead th {
+      border-color: chocolate;
+    }
+
+    tbody tr:not(:last-child) td {
+      border-color: chocolate;
+    }
+  }
+
+  /* grid from here */
+  @media (max-width: 1200px) {
+    table::before {
+      content: "Display grid";
+    }
+
+    table,
+    thead,
+    tbody {
+      display: block;
+    }
+
+    table tr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    thead th,
+    tbody td {
+      border: none;
+    }
+
+    thead tr {
+      border-bottom: 2px solid chocolate;
+    }
+
+    tbody tr:not(:last-child) {
+      border-bottom: 1px dotted chocolate;
+    }
+
+    tbody tr:not(:last-child) td {
+      border-bottom: none;
+    }
+
+    .name {
+      grid-row: span 3;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  margin: 20vh 10vw;
+  color: #000;
+  border-color: #000;
+}
+
+table::before {
+  content: "Display table";
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 1em;
+  text-align: left;
+}
+
+thead th {
+  border-bottom: 2px solid #000;
+}
+
+tbody tr:not(:last-child) td {
+  border-bottom: 1px dotted #000;
+}
+
+.name {
+  font-weight: 800;
+}
