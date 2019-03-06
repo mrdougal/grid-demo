@@ -1,5 +1,6 @@
 # Display Grid
 
+
 Grid doesn’t replace flex, they’re for different jobs.
 
 - Grid works in two directions, rows and columns
@@ -23,3 +24,5 @@ As modern browsers should also understand the `@supports` query
   }
 }
 ```
+
+<img width="882" alt="screen shot 2019-03-07 at 7 13 12 am" src="https://user-images.githubusercontent.com/9635/53903444-9e896a80-40a8-11e9-9834-bcc7d74c5491.png">
